@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Allerta&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'allerta', sans-serif;
+}
+
+header {
+  font-family: 'Julius Sans One', sans-serif;
+}
+
+main::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 200px;
+  width: 100%;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgb(0, 0, 0) 100%);
+  /* Білий колір, що стає прозорим донизу */
+  /* Висота блоку */
+  /* Ширина блоку */
+}
