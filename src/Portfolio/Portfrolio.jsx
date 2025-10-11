@@ -4,45 +4,36 @@ import Slide from "react-awesome-reveal"
 
 
 const videos = [
-    "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    "https://www.youtube.com/embed/3JZ_D3ELwOQ",
-    "https://www.youtube.com/embed/l9PxOanFjxQ",
-    "https://www.youtube.com/embed/tAGnKpE4NCI",
-    "https://www.youtube.com/embed/kXYiU_JCYtU",
-    "https://www.youtube.com/embed/2Vv-BfVoq4g",
-    "https://www.youtube.com/embed/9bZkp7q19f0",
-    "https://www.youtube.com/embed/60ItHLz5WEA",
-    "https://www.youtube.com/embed/fJ9rUzIMcZQ",
-    "https://www.youtube.com/embed/OPf0YbXqDm0",
+    "https://www.youtube.com/embed/uchFQCvaqy8",
+    "https://youtube.com/embed/M5RnIeJTsi8",
+    "https://www.youtube.com/embed/BZrOUVdTeX4",
+    "https://www.youtube.com/embed/mqj38wCAmBU",
 ];
+
 
 const categories = [
     {
         name: "Logos",
         posts: [
-            { id: 1, title: "Does drinking coffee make you smarter?", video: videos[0] },
-            { id: 2, title: "So you've bought coffee... now what?", video: videos[1] },
+            { id: 1, title: "Logo Template", video: videos[1] },
         ],
     },
     {
         name: "Shorts",
         posts: [
-            { id: 1, title: "Is tech making coffee better or worse?", video: videos[2] },
-            { id: 2, title: "The most innovative things happening in coffee", video: videos[3] },
+            { id: 1, title: "Podcast short term tempelate", video: videos[0] },
+            { id: 2, title: "The worst advice we've ever heard about coffee", video: videos[3] },
         ],
     },
     {
         name: "Animated",
         posts: [
-            { id: 1, title: "Ask Me Anything: 10 answers to your questions about coffee", video: videos[4] },
-            { id: 2, title: "The worst advice we've ever heard about coffee", video: videos[5] },
         ],
     },
     {
-        name: "Any",
+        name: "Explainer",
         posts: [
-            { id: 1, title: "Ask Me Anything: 10 answers to your questions about coffee", video: videos[6] },
-            { id: 2, title: "The worst advice we've ever heard about coffee", video: videos[7] },
+            { id: 1, title: "App explainer video template", video: videos[2] },
         ],
     },
 ];
@@ -59,7 +50,7 @@ export default function Example() {
                         {categories.map(({ name }) => (
                             <Tab
                                 key={name}
-                                className="rounded px-3 py-1 text-sm font-semibold text-white focus:outline-none data-hover:bg-[#0a2f42] data-selected:bg-[#005a86]"
+                                className="rounded sm:px-3 px-0 py-1 sm:text-sm text-xs font-semibold md:text-xl text-white focus:outline-none data-hover:bg-[#0a2f42] data-selected:bg-[#005a86]"
                             >
                                 {name}
                             </Tab>
@@ -76,9 +67,8 @@ export default function Example() {
                                         const thumbnail = `https://img.youtube.com/vi/${id}/hqdefault.jpg`;
 
                                         return (
-                                            <Slide direction="up">
+                                            <Slide triggerOnce key={post.id} >
                                                 <li
-                                                    key={post.id}
                                                     className="relative rounded-md p-3 transition hover:bg-[#005a86]/30"
                                                 >
                                                     <p className="font-semibold text-white mb-2">{post.title}</p>

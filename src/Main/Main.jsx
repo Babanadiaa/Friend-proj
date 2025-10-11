@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import Andrew from "../assets/1.png";
+import Andrew from "../assets/andreyko2try.webp";
 
 export default function HeroSection() {
     const ref = useRef(null);
@@ -12,14 +12,13 @@ export default function HeroSection() {
     });
 
     // Масштаб і вертикальне зміщення
-    const scale = useTransform(scrollYProgress, [0, 0.5], [1, 1.3]);
+    const scale = useTransform(scrollYProgress, [0, 1], [1.5, 2]);
     const y = useTransform(scrollYProgress, [0, 1], [0, -100]);
 
     return (
         <main
             ref={ref}
-            className='px-10 min-h-screen  overflow-hidden flex flex-col relative justify-between before:content-[""] before:absolute before:inset-0 before:bg-gradient-to-b before:from-transparent before:to-black before:-z-10'
-        >
+            className='px-10 min-h-[120vh] overflow-hidden flex flex-col relative justify-between before:content-[""] before:absolute before:inset-0 before:bg-gradient-to-b before:from-transparent before:to-black before:-z-10'>
             <section className='flex-col md:justify-between pt-20 md:pt-80 w-full md:flex-row flex '>
                 <h1 className='z-10 text-white md:text-black text-2xl md:max-w-[40%] md:text-4xl'>
                     Hello, I’m Andrew Mamchur, Motion Designer, Video Editor.
@@ -43,13 +42,13 @@ export default function HeroSection() {
             </section>
 
             {/* Фото */}
-            <div className='md:absolute md:left-1/2 bottom-0 md:-translate-x-1/2 flex '>
+            <div className='md:absolute md:left-1/2 bottom-0 md:-translate-x-1/2 flex relative  '>
                 <motion.img
                     src={Andrew}
                     alt='Andrew Mamchur'
-                    loading="lazy"
+                    // loading="lazy"
                     style={{ scale, y }}
-                    className=' h-[60vh] object-cover transition-transform duration-700'
+                    className='relative h-[60vh] object-cover transition-transform duration-700 '
                 />
             </div>
         </main>
