@@ -32,17 +32,17 @@ export default function About() {
     ];
 
     return (
-        <section className=" mx-auto p-8 text-white bg-black" id='About'>
+        <section className=" mx-auto pt-20 p-8 text-white bg-black" id='About'>
             <h2 className="text-3xl font-bold mb-10 text-center">About</h2>
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-10">
                 {steps.map(step => (
                     <Slide triggerOnce key={step.number}>
-                        <li className="bg-white/5 rounded-xl p-6 shadow-lg flex flex-col items-start">
-                            <span className="text-lg font-bold bg-[#005a86] text-white rounded-full w-8 h-8 flex items-center justify-center mb-4">
-                                {step.number}
+                        <li className="bg-white/95 rounded-xl p-6 shadow-lg flex  flex-col items-start">
+                            <span className="text-lg font-bold text-black  bg-[#6ed6f8] rounded rotate-45 w-8 h-8 flex items-center justify-center mb-4">
+                                <p className='rotate-[-45deg]'>{step.number}</p>
                             </span>
-                            <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
-                            <p className="text-white/80">{step.desc}</p>
+                            <h3 className="text-xl font-semibold text-black mb-2">{step.title}</h3>
+                            <p className="text-black">{step.desc}</p>
                         </li>
                     </Slide>
                 ))}
